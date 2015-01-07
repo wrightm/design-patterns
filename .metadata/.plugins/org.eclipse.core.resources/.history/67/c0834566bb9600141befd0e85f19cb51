@@ -1,9 +1,0 @@
-Strategy:
-
-Used to encapsulate different object behaviours and allows them to be easily interchangeable by assigning responsibility to an object to decide when to use a particular behaviour.
-
-Advantages:
-
-Separates code that changes from code that stays the same. Example, A Dancer Class, we could pull out dance moves as a behavior.
-Flexible by having the base behaviour as an interface. Can change type at runtime. Example, DanceBehaviour -> HandDanceBehaviour or DanceBehaviour -> LegDanceBehaviour.
-Code reuse, not only the dance class can use the DanceBehaviour interface. A normal Human could too.

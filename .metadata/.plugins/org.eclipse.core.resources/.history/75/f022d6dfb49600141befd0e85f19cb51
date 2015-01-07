@@ -1,3 +1,0 @@
-Strategy:
-
-Used to encapsulate different object behaviors and allows them to be easily interchangeable by assigning responseability to an object to decide when to use a particular behavour   
