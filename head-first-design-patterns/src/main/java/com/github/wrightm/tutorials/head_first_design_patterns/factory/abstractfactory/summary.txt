@@ -1,0 +1,22 @@
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+
+Advantages
+
+* It isolates concrete classes from the client.
+* You use the Abstract Factory to control the classes of objects the client creates.
+* Product names are isolated in the implementation of the Concrete Factory, clients use the instances through their abstract interfaces.
+* Exchanging product families is easy.
+* None of the client code breaks because the abstract interfaces don’t change frequently.
+* Because the abstract factory creates a complete family of products, the whole product family changes when the concrete factory is changed.
+* It promotes consistency among products.
+* It is the concrete factory’s job to make sure that the right products are used together.
+
+Disadvantages
+
+* Adding a new product requires extending the abstract interface which implies that all of its derived concrete classes also must change. The following changes needs to be taken care of:
+* New abstract product class is added
+* New product implementation is added
+* Abstract factory interface is extended
+* Derived concrete factories must implement the extensions
+* Client has to be extended to use the new product
