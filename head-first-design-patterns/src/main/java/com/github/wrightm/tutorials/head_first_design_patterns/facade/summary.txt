@@ -1,0 +1,19 @@
+ A facade is an object that provides a simplified interface to a larger body of code, such as a class library. 
+ Facade Design pattern provides an easy to use interface and makes things easier by hiding the details of the implementation.
+
+When designing good programs, programmers usually attempt to avoid excess coupling between module/classes. 
+Using this pattern helps to simplify much of the interfacing that makes large amounts of coupling complex to use and difficult to understand.d
+
+
+Advantage –
+
+It hides the implementation of the subsystem from clients, making the  subsystem easier to use
+It promotes weak coupling between the subsystem and its clients. This allows you to change the classes the comprise the subsystem without affecting the clients.
+It reduces compilation dependencies in large software systems
+It simplifies porting systems to other platforms, because it's less likely that building one subsystem requires building all others
+
+Disadvantage –
+
+It does not prevent sophisticated clients from accessing the underlying classes
+Note that Facade does not add any functionality, it just simplifies interfaces
+

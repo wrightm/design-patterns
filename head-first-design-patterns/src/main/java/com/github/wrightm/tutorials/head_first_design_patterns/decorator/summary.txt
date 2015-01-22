@@ -1,0 +1,37 @@
+Convert the interface of a class into another interface clients expect.
+Adapter lets classes work together, that could not otherwise because of incompatible interfaces.
+
+The Adapter design pattern (sometimes referred to as the Wrapper Pattern or simply a Wrapper) 'adapts' one interface for a class into another that a client expects.
+An adapter allows classes to work together that normally could not because of incompatible interfaces by wrapping its own interface around that of an already existing class.
+
+The Adapter pattern maps the interface of one class onto another so that they can work together. These incompatible classes may come from different libraries or frameworks.
+
+There are two types of adapter patterns:
+
+
+The Object Adapter pattern - 
+In this type of adapter pattern, the adapter contains an instance of the class it wraps. 
+In this situation, the adapter makes calls to a physical instance of the wrapped object.
+
+Objects Adapters are the classical example of the adapter pattern. 
+It uses composition, the Adaptee delegates the calls to Adaptee (opossed to class adapters which extends the Adaptee). 
+This behaviour gives us a few advantages over the class adapters(however the class adapters can be implemented in languages 
+allowing multiple inheritance). The main advantage is that the Adapter adapts not only the Adpatee but all its subclasses.
+All it's subclasses with one "small" restriction: all the subclasses which don't add new methods,
+because the used mechanism is delegation. So for any new method the Adapter must be changed or extended to expose the new methods as well. 
+The main disadvantage is that it requires to write all the code for delegating all the necessary requests tot the Adaptee.
+
+
+Client -> Target <- Adapter -> Adaptee
+
+Class Adapters
+
+Class Adapter pattern - This type of adapter uses multiple inheritance to achieve its goal. 
+The adapter is created inheriting interfaces from both the interface that is expected and the interface that is pre-existing.
+This pattern is less often used as some popular languages, such as C#, Java, do not support true multiple inheritance as the designers of these languages consider it a dangerous practice.
+
+Class adapters can be implemented in languages supporting multiple inheritance(Java, C# or PHP does not support multiple inheritance). Thus, such adapters can not be easy implemented in Java, C# or VB.NET. Class adapter uses inheritance instead of composition. It means that instead of delegating the calls to the Adaptee, it subclasses it. In conclusion it must subclass both the Target and the Adaptee. There are advantages and disadvantages:
+
+It adapts the specific Adaptee class. The class it extends. If that one is subclassed it can not be adapted by the existing adapter.
+It doesn't require all the code required for delegation, which must be written for an Object Adapter.
+If the Target is represented by an interface instead of a class then we can talk about "class" adapters, because we can implement as many interfaces as we want.
