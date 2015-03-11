@@ -1,0 +1,20 @@
+Overview
+
+The idea of the Chain Of Responsibility is that it avoids coupling the sender of the request to the receiver, 
+giving more than one object the opportunity to handle the request.  
+This process of delegation appears quite frequently in the real world where there is one interface for the customer to go through. 
+One example could be a bank, 
+where an application that you send in to the bank branch may be handled by one particular department. 
+Another example is a vending machine, where you can put in any coin, 
+but the coin is passed on to the appropriate receptacle to determine the amount that the coin is worth.
+
+When to use
+
+This pattern is recommended when either of the following scenarios occur in your application:
+
+* Multiple objects can handle a request and the handler doesn't have to be a specific object
+* A set of objects should be able to handle a request with the handler determined at runtime
+* A request not being handled is an acceptable outcome.
+
+In JavaEE, the concept of Servlet filters implement the Chain of Responsibility pattern, 
+and may also decorate the request to add extra information before the request is handled by a servlet.
