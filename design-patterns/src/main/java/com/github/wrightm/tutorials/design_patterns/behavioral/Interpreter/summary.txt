@@ -1,0 +1,24 @@
+
+ 
+Interpreter
+
+
+Motivation
+
+The Interpreter is one of the Design Patterns published in the GoF which is not really used. 
+Usually the Interpreter Pattern is described in terms of formal grammars, 
+like it was described in the original form in the GoF but the area where this design pattern can be applied can be extended.
+
+Intent
+
+- Given a language,
+define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+
+- Map a domain to a language, 
+the language to a grammar, 
+and the grammar to a hierarchical object-oriented design
+
+Implementation
+
+The implementation of the Interpreter pattern is just the use of the composite pattern applied to represent a grammar. 
+The Interpreter defines the behaviour while the composite defines only the structure. 

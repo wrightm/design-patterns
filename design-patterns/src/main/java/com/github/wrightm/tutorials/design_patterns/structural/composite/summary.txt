@@ -1,0 +1,47 @@
+Intent
+
+Has one to many relation ship.
+
+Has a hierarchy in a tree structure.
+
+Directories that could have other directories.
+
+Problem
+
+Application needs to manipulate a hierarchical collection of "primitive" and "composite" objects. 
+Processing of a primitive object is handled one way, 
+and processing of a composite object is handled differently.
+Having to query the "type" of each object before attempting to process it is not desirable.
+
+Discussion
+
+Define an abstract base class (Component) that specifies the behavior that needs to be exercised uniformly across all primitive and composite objects. 
+Subclass the Primitive and Composite classes off of the Component class. 
+Each Composite object "couples" itself only to the abstract type Component as it manages its "children".
+
+Use this pattern whenever you have "composites that contain components, 
+each of which could be a composite".
+
+Child management methods [e.g. addChild(), removeChild()] should normally be defined in the Composite class. 
+Unfortunately, 
+the desire to treat Primitives and Composites uniformly requires that these methods be moved to the abstract Component class. 
+See the "Opinions" section below for a discussion of "safety" versus "transparency" issues.
+
+Rules of thumb
+
+* Composite and Decorator have similar structure diagrams, 
+reflecting the fact that both rely on recursive composition to organize an open-ended number of objects.
+
+* Composite can be traversed with Iterator. 
+Visitor can apply an operation over a Composite. 
+Composite could use Chain of Responsibility to let components access global properties through their parent. 
+It could also use Decorator to override these properties on parts of the composition. 
+It could use Observer to tie one object structure to another and State to let a component change its behavior as its state changes.
+
+* Composite can let you compose a Mediator out of smaller pieces through recursive composition.
+
+* Decorator is designed to let you add responsibilities to objects without subclassing. 
+Composite's focus is not on embellishment but on representation. 
+These intents are distinct but complementary. Consequently, Composite and Decorator are often used in concert.
+
+* Flyweight is often combined with Composite to implement shared leaf nodes.

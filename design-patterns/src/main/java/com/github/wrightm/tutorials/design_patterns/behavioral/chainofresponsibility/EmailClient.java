@@ -1,4 +1,4 @@
-package com.github.wrightm.tutorials.design_patterns.behavioral.chainofcommand;
+package com.github.wrightm.tutorials.design_patterns.behavioral.chainofresponsibility;
 
 public class EmailClient {
 
